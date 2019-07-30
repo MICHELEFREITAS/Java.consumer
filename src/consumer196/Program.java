@@ -22,15 +22,9 @@ public class Program {
 		//variável recebe valor para atualizar preço.
 		double factor = 1.1;
 		
-		//Consumer que recebe função que recebe produto p e atualiza o preço.
-		//Pode abrir chaves e definir função entre chaves mas com 1 linha é opcional
-		Consumer<Product> cons = p -> {
-			p.setPrice(p.getPrice() * factor);
-		};
-		
 		//vai percorrer a coleção e executar um consumer para cada elemento. Atualizando preço de cada produt
-		//chamando variável cons
-		list.forEach(cons);
+		//colocando expressao lambda e colocando direto no argumento da função 
+		list.forEach(p -> p.setPrice(p.getPrice() * factor));
 		
 		//imprimir a lista. Usando reference method para o println
 		list.forEach(System.out::println);
