@@ -20,8 +20,9 @@ public class Program {
 		list.add(new Product("HD Case", 80.90));
 		
 		//vai percorrer a coleção e executar um consumer para cada elemento. Atualizando preço de cada produt
-		//faz referencia a classe criada no Product
-		list.forEach(Product::staticPriceUpdate);	
+		//faz referencia a classe não estática criada no Product
+		list.forEach(Product::nonStaticPriceUpdate);
+		
 		//imprimir a lista. Usando reference method para o println
 		list.forEach(System.out::println);
 	}
