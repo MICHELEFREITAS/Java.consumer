@@ -28,6 +28,11 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	//stático só mexe com objeto que vai receber como parâmetro
+	public static void staticPriceUpdate(Product p) {
+		p.setPrice(p.getPrice() * 1.1);
+	}
 
 	@Override
 	public String toString() {
